@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Zoho CPaaS Test Suite">
+            <directory suffix="Test.php">./tests</directory>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <directory suffix=".php">./src</directory>
+        </include>
+    </source>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="APP_KEY" value="base64:TestKey12345678901234567890123456789012="/>
+        <env name="ZOHO_CPAAS_SEND_MAIL_TOKEN" value="test-send-token"/>
+        <env name="ZOHO_CPAAS_REGION" value="us"/>
+        <env name="ZOHO_CPAAS_MAILAGENT_ALIAS" value="test-agent"/>
+    </php>
+</phpunit>

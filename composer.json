@@ -1,0 +1,69 @@
+{
+    "name": "olorunda/laravel-zoho-cpaas",
+    "description": "Comprehensive Laravel package for Zoho CPaaS & ZeptoMail: Transactional Email API, Batch Sending, Templates, Mail Transport, Suppression, Agents, Domains, Logs & OAuth",
+    "homepage": "https://github.com/olorunda/laravel-zoho-cpaas",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "zoho",
+        "cpaas",
+        "zeptomail",
+        "zoho-mail",
+        "transactional-email",
+        "mail-driver",
+        "email-api",
+        "batch-email",
+        "templates"
+    ],
+    "authors": [
+        {
+            "name": "Olorunda",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.5",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/mail": "^10.0|^11.0|^12.0",
+        "illuminate/console": "^10.0|^11.0|^12.0",
+        "symfony/mailer": "^6.2|^7.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.5|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Olorunda\\ZohoCpaas\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Olorunda\\ZohoCpaas\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Olorunda\\ZohoCpaas\\ZohoCpaasServiceProvider"
+            ],
+            "aliases": {
+                "ZohoCpaas": "Olorunda\\ZohoCpaas\\Facades\\ZohoCpaas",
+                "ZeptoMail": "Olorunda\\ZohoCpaas\\Facades\\ZeptoMail"
+            }
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {}
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
